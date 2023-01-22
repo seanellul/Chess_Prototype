@@ -1,5 +1,6 @@
 import { VECTOR_OFFSET } from 'offsets'
 
+/* Exporting the config object. */
 export const config = {
     hovertext: 'Talk with RoVi',
     reactDistance: 3,
