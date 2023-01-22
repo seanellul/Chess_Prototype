@@ -1,8 +1,12 @@
 import resources from "../../resources"
 
+/* Creating a message bus and a server. */
 const sceneMessageBus = new MessageBus()
 const server = 'https://art-fest-server.herokuapp.com/scenes/'
 
+
+/* This class creates a heart model, and when you click on it, it sends a request to the server to
+increase the like by 1 */
 export class Like extends Entity {
   constructor(
     transform: TranformConstructorArgs,
