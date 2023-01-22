@@ -16,6 +16,12 @@ export class LerpData {
     this.fraction = fraction
   }
 }
+/* "If the elevator has a LerpData component, then move it from its origin to its target over the
+course of 1 second."
+
+The first thing we do is get all the entities that have the Elevator tag. We then loop through them
+and check if they have a LerpData component. If they do, then we get their Transform component and
+LerpData component */
 export class LerpMove implements ISystem {
   update(dt: number) {
     for (let el of elevatorGroup.entities) {
