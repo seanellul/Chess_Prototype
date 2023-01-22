@@ -4,6 +4,7 @@ import { spawnEntity, initSound } from "helpers"
 import resources from '../resources'
 
 // Elevator logic
+/* LerpData is a class that holds the origin, target, and fraction of a lerp */
 @Component("lerpData")
 export class LerpData {
   origin: Vector3 = Vector3.Zero()
