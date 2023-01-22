@@ -1,5 +1,6 @@
 import { Dialog } from '@dcl/npc-scene-utils'
 
+/* Exporting the array of dialogs. */
 export const MonkDialog: Dialog[] = [
   // #0
   {
