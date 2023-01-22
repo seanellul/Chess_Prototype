@@ -3,7 +3,14 @@ import resources from '../../resources'
 import { config } from './config'
 import { MonkDialog } from './dialog'
 
-export const monk = new NPC(
+/* Creating a new NPC with the following properties:
+- position: config.position, rotation: config.rotation
+- resources.robot
+- () => {
+    // animations
+    // monk.playAnimation('Hello', true, 2) */
+
+    export const monk = new NPC(
   { position: config.position, rotation: config.rotation },
   resources.robot,
   () => {
