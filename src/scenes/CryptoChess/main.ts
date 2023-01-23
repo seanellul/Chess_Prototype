@@ -13,8 +13,6 @@ import { addBillboard } from "components/billboard";
 import { spawnElevators } from "components/elevators";
 import { sceneMessageBus } from "components/messageBus";
 // import { scaleSystemInit, ScaleUpData } from "components/scaleUpDown"
-import { monk } from "./components/NPC/monk"; // initialize on load
-import { Like } from "./components/Like/Like";
 
 /* A BoardCellFlag is a flag that indicates whether a board cell is vacant or not, and if not, what
 piece is occupying it. */
@@ -85,29 +83,7 @@ export class FloatMove implements ISystem {
 
 export function createCryptoChess(): void {
   /* Creating a new Like object. */
-  const like = new Like(
-    {
-      position: new Vector3(14, 0.75, 0.5).add(VECTOR_OFFSET),
-      rotation: Quaternion.Euler(0, 0, 0),
-    },
-    "61b90613dd08def8380ababb"
-  );
 
-  /* Adding a component to the monk entity. The component is called OnPointerDown and it is a function
-that is called when the player clicks on the monk. The function is an arrow function that calls the
-monk's activate function. The arrow function also has a hoverText property that is used to display
-text when the player hovers over the monk. */
-  monk.addComponent(
-    new OnPointerDown(
-      () => {
-        if (monk.state !== "talking" || !monk.dialog.isDialogOpen)
-          monk.activate();
-      },
-      {
-        hoverText: "Talk with RoVi",
-      }
-    )
-  );
 
   /* Defining two constants, WHITE and BLACK, and assigning them the values "white" and "black"
 respectively. */
